@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: fct_sales_with_currency
+    description: "Sales data joined with currency rates for multi-currency analysis"
+    columns:
+      - name: product
+        tests: [not_null]
+      - name: net_sales_converted
+        tests: [not_null]

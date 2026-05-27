@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_sales
+    description: "Cleaned internal sales data"
+    columns:
+      - name: product
+        tests: [not_null]
+      - name: units_sold
+        tests: [not_null]
+      - name: profit
+        tests: [not_null]
+
+  - name: stg_currency_rates
+    description: "Cleaned currency exchange rates"
+    columns:
+      - name: target_currency
+        tests: [not_null, unique]
+      - name: exchange_rate
+        tests: [not_null]
+
+  - name: stg_competitor_prices
+    description: "Cleaned competitor pricing data"
+    columns:
+      - name: product_name
+        tests: [not_null]
+      - name: competitor_price_usd
+        tests: [not_null]

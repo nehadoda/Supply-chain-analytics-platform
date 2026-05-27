@@ -1,0 +1,8 @@
+version: 2
+
+seeds:
+  - name: raw_competitor_prices
+    description: "Uncleaned competitor_prices"
+    config:
+      column_types:
+        competitor_price: varchar

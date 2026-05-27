@@ -1,0 +1,39 @@
+[0m10:07:50.996715 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020CECDF9DB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020CEE0C8640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020CEE0C8460>]}
+
+
+============================== 10:07:51.004913 | 5ec87c92-d682-4c52-bead-c8f6bcd0c540 ==============================
+[0m10:07:51.004913 [info ] [MainThread]: Running with dbt=1.11.8
+[0m10:07:51.005916 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\itsme\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt init Sales-Analytics-platform', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m10:09:55.990024 [debug] [MainThread]: Starter project path: C:\Users\itsme\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\include\starter_project
+[0m10:09:56.195751 [info ] [MainThread]: 
+Your new dbt project "Sales_analytics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:09:56.196763 [info ] [MainThread]: Setting up your profile.
+[0m10:10:03.211783 [debug] [MainThread]: Command `dbt init` succeeded at 10:10:03.210278 after 132.38 seconds
+[0m10:10:03.212796 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020CECDF9DB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020CEE0C8640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020CEE0C0100>]}
+[0m10:10:03.213793 [debug] [MainThread]: Flushing usage events
+[0m10:10:03.693899 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:12:27.320424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022891A69E70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022892D38700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022892D38520>]}
+
+
+============================== 10:12:27.327777 | d45c8944-bff8-42d4-9c6f-aeb6c6b83206 ==============================
+[0m10:12:27.327777 [info ] [MainThread]: Running with dbt=1.11.8
+[0m10:12:27.328619 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\itsme\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt init Sales_analytics', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m10:12:27.372063 [info ] [MainThread]: A project called Sales_analytics already exists here.
+[0m10:12:27.373061 [debug] [MainThread]: Command `dbt init` succeeded at 10:12:27.373061 after 0.21 seconds
+[0m10:12:27.374065 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022891A69E70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022892D39960>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022892D38D90>]}
+[0m10:12:27.374065 [debug] [MainThread]: Flushing usage events
+[0m10:12:27.873415 [debug] [MainThread]: An error was encountered while trying to flush usage events
