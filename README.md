@@ -229,4 +229,4 @@ Driver={DuckDB Driver};Database=<path-to>/sales_analytics/Analytics.duckdb;acces
 
 **Neha Doda**  
 Data Analyst | Power BI Developer | Analytics Engineer  
-[GitHub](https://github.com/nehadoda) 
+[GitHub](https://github.com/nehadoda) . [LinkedIn](https://www.linkedin.com/in/neha-doda-9284b8115/)
