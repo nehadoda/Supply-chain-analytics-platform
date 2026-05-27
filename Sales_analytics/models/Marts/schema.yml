@@ -8,3 +8,12 @@ models:
         tests: [not_null]
       - name: net_sales_converted
         tests: [not_null]
+
+  - name: fct_price_comparison
+    description: "Compares internal prices vs competitor prices"
+    
+  - name: fct_profit_analysis
+    description: "Profit margin analysis by product, segment and country"
+    
+  - name: fct_currency_impact
+    description: "Revenue impact of currency fluctuations by country"
