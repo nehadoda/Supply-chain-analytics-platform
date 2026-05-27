@@ -168,7 +168,7 @@ Business-ready tables that combine sources and add analytical logic.
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/nehadoda/Sales-analytics-platform.git
-cd Sales-analytics-platform
+cd Sales-analytics
 ```
 
 ### 2. Install dependencies
