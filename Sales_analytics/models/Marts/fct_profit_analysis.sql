@@ -13,11 +13,11 @@ SELECT
     SUM(profit)                                   AS total_profit,
     ROUND(SUM(profit) / NULLIF(SUM(net_sales), 0) * 100, 2) AS profit_margin_pct,
     CASE
-        WHEN SUM(profit) / NULLIF(SUM(net_sales), 0) > 0.20
-            THEN 'High Margin'
-        WHEN SUM(profit) / NULLIF(SUM(net_sales), 0) > 0.10
-            THEN 'Medium Margin'
-        ELSE 'Low Margin'
-    END                                           AS margin_category
+    WHEN SUM(profit) / NULLIF(SUM(net_sales), 0) * 100 > 20
+        THEN 'High Margin'
+    WHEN SUM(profit) / NULLIF(SUM(net_sales), 0) * 100 > 10
+        THEN 'Medium Margin'
+    ELSE 'Low Margin'
+        END AS margin_category
 FROM {{ ref('stg_sales') }}
 GROUP BY product, segment, country, year, month_name

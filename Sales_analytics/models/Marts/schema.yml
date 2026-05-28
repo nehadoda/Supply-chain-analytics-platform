@@ -1,19 +1,136 @@
 version: 2
 
 models:
+
   - name: fct_sales_with_currency
-    description: "Sales data joined with currency rates for multi-currency analysis"
+    description: "Core sales fact table joining internal sales data with live currency exchange rates. Each row represents one sales transaction converted into multiple currencies for international revenue analysis."
+    columns:
+      - name: segment
+        description: "Customer segment the sale belongs to. Values: Government, Midmarket, Enterprise, Small Business, Channel Partners."
+        tests: [not_null]
+      - name: country
+        description: "Country where the sale took place. Values: United States of America, Canada, France, Germany, Mexico."
+        tests: [not_null]
+      - name: product
+        description: "Name of the product sold. Values: Carretera, Montana, Paseo, Velo, VTT, Amarilla."
+        tests: [not_null]
+      - name: discount_band
+        description: "Discount tier applied to the sale. Values: None, Low, Medium, High."
+      - name: units_sold
+        description: "Number of units sold in the transaction."
+        tests: [not_null]
+      - name: sale_price
+        description: "Price per unit at which the product was sold, in USD."
+        tests: [not_null]
+      - name: gross_sales
+        description: "Total revenue before any discounts are applied. Calculated as units_sold multiplied by sale_price, in USD."
+      - name: discounts
+        description: "Total discount amount deducted from gross sales, in USD."
+      - name: net_sales
+        description: "Actual revenue after discounts. Calculated as gross_sales minus discounts, in USD."
+        tests: [not_null]
+      - name: cogs
+        description: "Cost of goods sold — the total cost to manufacture or procure the units sold, in USD."
+      - name: profit
+        description: "Net profit from the transaction. Calculated as net_sales minus cogs, in USD."
+      - name: month_name
+        description: "Full name of the month the sale occurred. Example: January, February."
+      - name: month_number
+        description: "Numeric month of the sale. Range: 1 to 12."
+      - name: year
+        description: "Year the sale occurred. Values: 2013 or 2014. Note: 2013 contains only 4 months of data (Sept–Dec)."
+      - name: sale_date
+        description: "First day of the sale month, constructed using MAKE_DATE(year, month_number, 1). Used for time-series analysis."
+      - name: exchange_rate
+        description: "Exchange rate from USD to the target currency at the time of the last API update."
+      - name: target_currency
+        description: "Currency code the sales figures are converted into. Values in this model: GBP, EUR, CAD, AUD."
+      - name: net_sales_converted
+        description: "Net sales revenue converted from USD to the target currency. Calculated as net_sales multiplied by exchange_rate, rounded to 2 decimal places."
+        tests: [not_null]
+      - name: profit_converted
+        description: "Profit converted from USD to the target currency. Calculated as profit multiplied by exchange_rate, rounded to 2 decimal places."
+
+  - name: fct_profit_analysis
+    description: "Aggregated profitability fact table grouped by product, segment, country, year and month. Each row represents total sales performance and profit margin for a unique combination of these dimensions. Used for margin analysis and product performance reporting."
     columns:
       - name: product
+        description: "Name of the product. Values: Carretera, Montana, Paseo, Velo, VTT, Amarilla."
         tests: [not_null]
-      - name: net_sales_converted
+      - name: segment
+        description: "Customer segment. Values: Government, Midmarket, Enterprise, Small Business, Channel Partners."
         tests: [not_null]
+      - name: country
+        description: "Country where the sales occurred. Values: United States of America, Canada, France, Germany, Mexico."
+        tests: [not_null]
+      - name: year
+        description: "Year of the sales period. Values: 2013 or 2014."
+      - name: month_name
+        description: "Full name of the month. Example: January, October."
+      - name: total_units_sold
+        description: "Sum of all units sold for this product-segment-country-period combination."
+        tests: [not_null]
+      - name: total_gross_sales
+        description: "Sum of gross sales revenue before discounts for this group, in USD."
+      - name: total_discounts
+        description: "Sum of all discounts applied to sales in this group, in USD."
+      - name: total_net_sales
+        description: "Sum of actual revenue after discounts for this group, in USD."
+        tests: [not_null]
+      - name: total_cogs
+        description: "Sum of cost of goods sold for this group, in USD."
+      - name: total_profit
+        description: "Sum of net profit for this group. Calculated as total_net_sales minus total_cogs, in USD."
+        tests: [not_null]
+      - name: profit_margin_pct
+        description: "Profit as a percentage of net sales. Formula: (total_profit / total_net_sales) * 100. NULLIF used to avoid division by zero. Rounded to 2 decimal places."
+      - name: margin_category
+        description: "Business classification of profitability. High Margin = above 20%, Medium Margin = 10–20%, Low Margin = below 10%. Used for traffic-light reporting in Power BI."
 
   - name: fct_price_comparison
-    description: "Compares internal prices vs competitor prices"
-    
-  - name: fct_profit_analysis
-    description: "Profit margin analysis by product, segment and country"
-    
+    description: "Pricing intelligence fact table comparing internal average sale prices against scraped competitor prices. Uses a CROSS JOIN since competitor products are not directly mapped to internal products — all competitor prices are compared against all internal products. Each row represents a product-segment-country pricing position."
+    columns:
+      - name: product
+        description: "Internal product name being compared. Values: Carretera, Montana, Paseo, Velo, VTT, Amarilla."
+        tests: [not_null]
+      - name: segment
+        description: "Customer segment associated with the internal product sales."
+        tests: [not_null]
+      - name: country
+        description: "Country where the internal sales occurred."
+        tests: [not_null]
+      - name: avg_our_price
+        description: "Average sale price per unit of our product across all transactions in this group, in USD. Rounded to 2 decimal places."
+        tests: [not_null]
+      - name: avg_competitor_price
+        description: "Average price of competitor products from web-scraped data, in USD. Rounded to 2 decimal places."
+        tests: [not_null]
+      - name: price_difference
+        description: "Difference between our average price and the competitor average price. Positive value means we are more expensive. Negative value means we are cheaper. Rounded to 2 decimal places."
+      - name: price_position
+        description: "Business label summarising pricing position. Values: We Are More Expensive, We Are Cheaper, Same Price. Derived from comparing avg_our_price vs avg_competitor_price."
+
   - name: fct_currency_impact
-    description: "Revenue impact of currency fluctuations by country"
+    description: "Currency impact fact table showing how exchange rates affect revenue when converted to each country's local currency. Each country is mapped to its relevant currency (France and Germany to EUR, Canada to CAD, Mexico to MXN, USA to USD). Each row represents aggregated revenue for a product-country-period combination with local currency conversion."
+    columns:
+      - name: country
+        description: "Country where the sales occurred. Determines which target currency is applied."
+        tests: [not_null]
+      - name: product
+        description: "Name of the product sold."
+        tests: [not_null]
+      - name: year
+        description: "Year of the sales period. Values: 2013 or 2014."
+      - name: month_name
+        description: "Full name of the month. Example: January, October."
+      - name: revenue_in_usd
+        description: "Total net sales revenue in USD for this product-country-period group. This is the base figure before currency conversion."
+        tests: [not_null]
+      - name: target_currency
+        description: "Currency code of the local currency applied to this country. EUR for France and Germany, CAD for Canada, MXN for Mexico, USD for United States."
+      - name: exchange_rate
+        description: "Exchange rate from USD to the target currency at the time of the last API update."
+      - name: revenue_in_local_currency
+        description: "Revenue converted from USD into the country's local currency. Calculated as revenue_in_usd multiplied by exchange_rate, rounded to 2 decimal places."
+      - name: currency_impact_usd
+        description: "The difference in value caused by the currency conversion, expressed back in USD terms. Calculated as revenue_in_local_currency minus revenue_in_usd. Shows whether the currency conversion adds or reduces apparent value."
