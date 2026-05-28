@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: main
+    description: "Raw data loaded via dbt seeds"
+    tables:
+      - name: raw_sales
+        description: "Microsoft sample sales dataset"
+      - name: raw_currency_rates
+        description: "Live currency exchange rates from ExchangeRate-API"
+      - name: raw_competitor_prices
+        description: "Competitor pricing from web scraping"
