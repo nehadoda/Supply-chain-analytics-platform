@@ -15,6 +15,8 @@ print(f"📁 Project root : {BASE_DIR}")
 print(f"📁 Data raw     : {data_raw}")
 print(f"📁 Seeds folder : {seeds}\n")
 
+os.makedirs(seeds, exist_ok=True)
+
 # ── 1. Convert Excel to CSV ────────────────────────────────────────────────────
 
 print("Converting sales Excel to CSV...")
