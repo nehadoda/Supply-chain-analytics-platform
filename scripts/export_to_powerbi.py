@@ -9,11 +9,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Finds the dbt folder automatically — checks both casings to be safe
 def find_dbt_folder():
-    for name in ["sales_analytics", "Sales_analytics", "Sales_Analytics"]:
+    for name in ["Sales_analytics", "sales_analytics", "Sales_Analytics"]:
         path = os.path.join(BASE_DIR, name)
         if os.path.exists(path):
             return path
-    raise FileNotFoundError("Could not find dbt project folder. Expected 'sales_analytics'.")
+    raise FileNotFoundError("Could not find dbt project folder.")
 
 DBT_FOLDER    = find_dbt_folder()
 DB_PATH       = os.path.join(DBT_FOLDER, "Analytics.duckdb")
