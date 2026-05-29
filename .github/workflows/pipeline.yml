@@ -42,6 +42,16 @@ jobs:
       # Step 6 — Run dbt pipeline
       - name: Run dbt
         run: |
+          mkdir -p ~/.dbt
+          cat > ~/.dbt/profiles.yml << 'EOF'
+          sales_analytics:
+            target: dev
+            outputs:
+              dev:
+                type: duckdb
+                path: "{{ env_var('DBT_DB_PATH', 'Analytics.duckdb') }}"
+                threads: 1
+          EOF
           cd sales_analytics
           dbt seed
           dbt run
