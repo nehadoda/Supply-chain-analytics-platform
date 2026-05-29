@@ -1,4 +1,77 @@
 product,segment,country,avg_our_price,avg_competitor_price,price_difference,price_position
+Montana,Channel Partners,Canada,12.0,909.39,-897.39,We Are Cheaper
+Montana,Channel Partners,Germany,12.0,909.39,-897.39,We Are Cheaper
+Montana,Enterprise,Canada,125.0,909.39,-784.39,We Are Cheaper
+Montana,Midmarket,United States of America,15.0,909.39,-894.39,We Are Cheaper
+Paseo,Midmarket,Mexico,15.0,909.39,-894.39,We Are Cheaper
+Paseo,Channel Partners,United States of America,12.0,909.39,-897.39,We Are Cheaper
+Velo,Government,Mexico,87.56,909.39,-821.84,We Are Cheaper
+Velo,Enterprise,France,125.0,909.39,-784.39,We Are Cheaper
+Velo,Enterprise,Canada,125.0,909.39,-784.39,We Are Cheaper
+Amarilla,Government,United States of America,157.71,909.39,-751.68,We Are Cheaper
+Carretera,Government,Mexico,181.75,909.39,-727.64,We Are Cheaper
+Carretera,Channel Partners,Canada,12.0,909.39,-897.39,We Are Cheaper
+Carretera,Channel Partners,France,12.0,909.39,-897.39,We Are Cheaper
+Carretera,Channel Partners,Germany,12.0,909.39,-897.39,We Are Cheaper
+Carretera,Small Business,Mexico,300.0,909.39,-609.39,We Are Cheaper
+Paseo,Enterprise,France,125.0,909.39,-784.39,We Are Cheaper
+Paseo,Small Business,United States of America,300.0,909.39,-609.39,We Are Cheaper
+VTT,Small Business,Mexico,300.0,909.39,-609.39,We Are Cheaper
+Paseo,Enterprise,Germany,125.0,909.39,-784.39,We Are Cheaper
+Paseo,Enterprise,Canada,125.0,909.39,-784.39,We Are Cheaper
+Velo,Enterprise,Germany,125.0,909.39,-784.39,We Are Cheaper
+VTT,Enterprise,Mexico,125.0,909.39,-784.39,We Are Cheaper
+VTT,Government,United States of America,167.64,909.39,-741.76,We Are Cheaper
+Amarilla,Small Business,Mexico,300.0,909.39,-609.39,We Are Cheaper
+Montana,Channel Partners,France,12.0,909.39,-897.39,We Are Cheaper
+Montana,Enterprise,France,125.0,909.39,-784.39,We Are Cheaper
+Montana,Enterprise,Germany,125.0,909.39,-784.39,We Are Cheaper
+VTT,Channel Partners,Mexico,12.0,909.39,-897.39,We Are Cheaper
+Montana,Small Business,Germany,300.0,909.39,-609.39,We Are Cheaper
+Velo,Channel Partners,United States of America,12.0,909.39,-897.39,We Are Cheaper
+Velo,Midmarket,United States of America,15.0,909.39,-894.39,We Are Cheaper
+Velo,Small Business,Germany,300.0,909.39,-609.39,We Are Cheaper
+Carretera,Midmarket,United States of America,15.0,909.39,-894.39,We Are Cheaper
+Velo,Small Business,France,300.0,909.39,-609.39,We Are Cheaper
+Montana,Small Business,France,300.0,909.39,-609.39,We Are Cheaper
+Montana,Small Business,Canada,300.0,909.39,-609.39,We Are Cheaper
+Velo,Small Business,Canada,300.0,909.39,-609.39,We Are Cheaper
+Amarilla,Channel Partners,France,12.0,909.39,-897.39,We Are Cheaper
+Amarilla,Enterprise,United States of America,125.0,909.39,-784.39,We Are Cheaper
+Amarilla,Channel Partners,Canada,12.0,909.39,-897.39,We Are Cheaper
+Amarilla,Channel Partners,Germany,12.0,909.39,-897.39,We Are Cheaper
+Carretera,Midmarket,Mexico,15.0,909.39,-894.39,We Are Cheaper
+Montana,Government,France,89.0,909.39,-820.39,We Are Cheaper
+Montana,Midmarket,Mexico,15.0,909.39,-894.39,We Are Cheaper
+Montana,Government,Germany,162.33,909.39,-747.06,We Are Cheaper
+Paseo,Government,Canada,127.11,909.39,-782.28,We Are Cheaper
+Paseo,Government,Germany,88.28,909.39,-821.12,We Are Cheaper
+Paseo,Small Business,Mexico,300.0,909.39,-609.39,We Are Cheaper
+VTT,Midmarket,France,15.0,909.39,-894.39,We Are Cheaper
+VTT,Midmarket,Germany,15.0,909.39,-894.39,We Are Cheaper
+Paseo,Government,France,96.81,909.39,-812.58,We Are Cheaper
+Carretera,Government,United States of America,96.0,909.39,-813.39,We Are Cheaper
+Montana,Government,Canada,78.2,909.39,-831.19,We Are Cheaper
+Paseo,Midmarket,United States of America,15.0,909.39,-894.39,We Are Cheaper
+VTT,Enterprise,United States of America,125.0,909.39,-784.39,We Are Cheaper
+VTT,Government,Mexico,124.22,909.39,-785.17,We Are Cheaper
+Amarilla,Midmarket,France,15.0,909.39,-894.39,We Are Cheaper
+Carretera,Enterprise,Canada,125.0,909.39,-784.39,We Are Cheaper
+Paseo,Channel Partners,Mexico,12.0,909.39,-897.39,We Are Cheaper
+Velo,Government,United States of America,90.44,909.39,-818.95,We Are Cheaper
+Velo,Channel Partners,Mexico,12.0,909.39,-897.39,We Are Cheaper
+Carretera,Enterprise,France,125.0,909.39,-784.39,We Are Cheaper
+VTT,Small Business,United States of America,300.0,909.39,-609.39,We Are Cheaper
+Amarilla,Government,Mexico,127.11,909.39,-782.28,We Are Cheaper
+Amarilla,Enterprise,Mexico,125.0,909.39,-784.39,We Are Cheaper
+Carretera,Small Business,United States of America,300.0,909.39,-609.39,We Are Cheaper
+Velo,Midmarket,Mexico,15.0,909.39,-894.39,We Are Cheaper
+Carretera,Enterprise,Germany,125.0,909.39,-784.39,We Are Cheaper
+VTT,Midmarket,Canada,15.0,909.39,-894.39,We Are Cheaper
+Amarilla,Small Business,United States of America,300.0,909.39,-609.39,We Are Cheaper
+Amarilla,Midmarket,Germany,15.0,909.39,-894.39,We Are Cheaper
+VTT,Channel Partners,United States of America,12.0,909.39,-897.39,We Are Cheaper
+Amarilla,Midmarket,Canada,15.0,909.39,-894.39,We Are Cheaper
 Carretera,Government,Canada,125.67,909.39,-783.73,We Are Cheaper
 Carretera,Government,Germany,99.25,909.39,-810.14,We Are Cheaper
 Montana,Small Business,Mexico,300.0,909.39,-609.39,We Are Cheaper
@@ -76,76 +149,3 @@ Carretera,Enterprise,Mexico,125.0,909.39,-784.39,We Are Cheaper
 Montana,Midmarket,France,15.0,909.39,-894.39,We Are Cheaper
 Amarilla,Midmarket,Mexico,15.0,909.39,-894.39,We Are Cheaper
 Velo,Midmarket,France,15.0,909.39,-894.39,We Are Cheaper
-Montana,Channel Partners,Canada,12.0,909.39,-897.39,We Are Cheaper
-Montana,Channel Partners,Germany,12.0,909.39,-897.39,We Are Cheaper
-Montana,Enterprise,Canada,125.0,909.39,-784.39,We Are Cheaper
-Montana,Midmarket,United States of America,15.0,909.39,-894.39,We Are Cheaper
-Paseo,Midmarket,Mexico,15.0,909.39,-894.39,We Are Cheaper
-Paseo,Channel Partners,United States of America,12.0,909.39,-897.39,We Are Cheaper
-Velo,Government,Mexico,87.56,909.39,-821.84,We Are Cheaper
-Velo,Enterprise,France,125.0,909.39,-784.39,We Are Cheaper
-Velo,Enterprise,Canada,125.0,909.39,-784.39,We Are Cheaper
-Amarilla,Government,United States of America,157.71,909.39,-751.68,We Are Cheaper
-Carretera,Government,Mexico,181.75,909.39,-727.64,We Are Cheaper
-Carretera,Channel Partners,Canada,12.0,909.39,-897.39,We Are Cheaper
-Carretera,Channel Partners,France,12.0,909.39,-897.39,We Are Cheaper
-Carretera,Channel Partners,Germany,12.0,909.39,-897.39,We Are Cheaper
-Carretera,Small Business,Mexico,300.0,909.39,-609.39,We Are Cheaper
-Paseo,Enterprise,France,125.0,909.39,-784.39,We Are Cheaper
-Paseo,Small Business,United States of America,300.0,909.39,-609.39,We Are Cheaper
-VTT,Small Business,Mexico,300.0,909.39,-609.39,We Are Cheaper
-Paseo,Enterprise,Germany,125.0,909.39,-784.39,We Are Cheaper
-Paseo,Enterprise,Canada,125.0,909.39,-784.39,We Are Cheaper
-Velo,Enterprise,Germany,125.0,909.39,-784.39,We Are Cheaper
-VTT,Enterprise,Mexico,125.0,909.39,-784.39,We Are Cheaper
-VTT,Government,United States of America,167.64,909.39,-741.76,We Are Cheaper
-Amarilla,Small Business,Mexico,300.0,909.39,-609.39,We Are Cheaper
-Montana,Channel Partners,France,12.0,909.39,-897.39,We Are Cheaper
-Montana,Enterprise,France,125.0,909.39,-784.39,We Are Cheaper
-Montana,Enterprise,Germany,125.0,909.39,-784.39,We Are Cheaper
-VTT,Channel Partners,Mexico,12.0,909.39,-897.39,We Are Cheaper
-Montana,Small Business,Germany,300.0,909.39,-609.39,We Are Cheaper
-Velo,Channel Partners,United States of America,12.0,909.39,-897.39,We Are Cheaper
-Velo,Midmarket,United States of America,15.0,909.39,-894.39,We Are Cheaper
-Velo,Small Business,Germany,300.0,909.39,-609.39,We Are Cheaper
-Carretera,Midmarket,United States of America,15.0,909.39,-894.39,We Are Cheaper
-Velo,Small Business,France,300.0,909.39,-609.39,We Are Cheaper
-Montana,Small Business,France,300.0,909.39,-609.39,We Are Cheaper
-Montana,Small Business,Canada,300.0,909.39,-609.39,We Are Cheaper
-Velo,Small Business,Canada,300.0,909.39,-609.39,We Are Cheaper
-Amarilla,Channel Partners,France,12.0,909.39,-897.39,We Are Cheaper
-Amarilla,Enterprise,United States of America,125.0,909.39,-784.39,We Are Cheaper
-Amarilla,Channel Partners,Canada,12.0,909.39,-897.39,We Are Cheaper
-Amarilla,Channel Partners,Germany,12.0,909.39,-897.39,We Are Cheaper
-Carretera,Midmarket,Mexico,15.0,909.39,-894.39,We Are Cheaper
-Montana,Government,France,89.0,909.39,-820.39,We Are Cheaper
-Montana,Midmarket,Mexico,15.0,909.39,-894.39,We Are Cheaper
-Montana,Government,Germany,162.33,909.39,-747.06,We Are Cheaper
-Paseo,Government,Canada,127.11,909.39,-782.28,We Are Cheaper
-Paseo,Government,Germany,88.28,909.39,-821.12,We Are Cheaper
-Paseo,Small Business,Mexico,300.0,909.39,-609.39,We Are Cheaper
-VTT,Midmarket,France,15.0,909.39,-894.39,We Are Cheaper
-VTT,Midmarket,Germany,15.0,909.39,-894.39,We Are Cheaper
-Paseo,Government,France,96.81,909.39,-812.58,We Are Cheaper
-Carretera,Government,United States of America,96.0,909.39,-813.39,We Are Cheaper
-Montana,Government,Canada,78.2,909.39,-831.19,We Are Cheaper
-Paseo,Midmarket,United States of America,15.0,909.39,-894.39,We Are Cheaper
-VTT,Enterprise,United States of America,125.0,909.39,-784.39,We Are Cheaper
-VTT,Government,Mexico,124.22,909.39,-785.17,We Are Cheaper
-Amarilla,Midmarket,France,15.0,909.39,-894.39,We Are Cheaper
-Carretera,Enterprise,Canada,125.0,909.39,-784.39,We Are Cheaper
-Paseo,Channel Partners,Mexico,12.0,909.39,-897.39,We Are Cheaper
-Velo,Government,United States of America,90.44,909.39,-818.95,We Are Cheaper
-Velo,Channel Partners,Mexico,12.0,909.39,-897.39,We Are Cheaper
-Carretera,Enterprise,France,125.0,909.39,-784.39,We Are Cheaper
-VTT,Small Business,United States of America,300.0,909.39,-609.39,We Are Cheaper
-Amarilla,Government,Mexico,127.11,909.39,-782.28,We Are Cheaper
-Amarilla,Enterprise,Mexico,125.0,909.39,-784.39,We Are Cheaper
-Carretera,Small Business,United States of America,300.0,909.39,-609.39,We Are Cheaper
-Velo,Midmarket,Mexico,15.0,909.39,-894.39,We Are Cheaper
-Carretera,Enterprise,Germany,125.0,909.39,-784.39,We Are Cheaper
-VTT,Midmarket,Canada,15.0,909.39,-894.39,We Are Cheaper
-Amarilla,Small Business,United States of America,300.0,909.39,-609.39,We Are Cheaper
-Amarilla,Midmarket,Germany,15.0,909.39,-894.39,We Are Cheaper
-VTT,Channel Partners,United States of America,12.0,909.39,-897.39,We Are Cheaper
-Amarilla,Midmarket,Canada,15.0,909.39,-894.39,We Are Cheaper
