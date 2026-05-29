@@ -14,7 +14,7 @@ A complete analytics engineering pipeline that ingests data from three real-worl
 
 ## Architecture
 
-![Architecture](Sales_analytics/snapshots/Project%20Architecture.png)
+![Architecture](Sales_analytics/snapshots/Project_Architechure.png)
 
 ---
 
