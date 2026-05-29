@@ -11,6 +11,8 @@ on:
 jobs:
   run-pipeline:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -57,4 +59,4 @@ jobs:
           git config --global user.email "actions@github.com"
           git add data_processed/
           git diff --staged --quiet || git commit -m "Auto refresh: updated pipeline output [skip ci]"
-          git push
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
