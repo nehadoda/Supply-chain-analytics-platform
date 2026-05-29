@@ -1,14 +1,11 @@
 name: Analytics Pipeline
 
 on:
-  # Runs automatically every day at 8am UTC
   schedule:
     - cron: '0 8 * * *'
-  # Also runs every time you push to GitHub
   push:
     branches:
       - main
-  # Also lets you trigger it manually from GitHub
   workflow_dispatch:
 
 jobs:
@@ -16,34 +13,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1 — Check out your repo code
       - name: Checkout repository
         uses: actions/checkout@v5
 
-      # Step 2 — Set up Python
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
-      # Step 3 — Install all dependencies
       - name: Install dependencies
         run: |
           pip install pandas requests beautifulsoup4 openpyxl dbt-duckdb duckdb
 
-      # Step 4 — Run ingestion
       - name: Run ingestion
         run: python scripts/ingest_data.py
 
-      # Step 5 — Prepare dbt seeds
       - name: Prepare seeds
         run: python scripts/prepare_seeds.py
 
-      # Step 6 — Run dbt pipeline
       - name: Run dbt
         run: |
           mkdir -p ~/.dbt
-
           cat > ~/.dbt/profiles.yml << 'EOF'
           sales_analytics:
             target: dev
@@ -53,24 +43,14 @@ jobs:
                 path: Analytics.duckdb
                 threads: 1
           EOF
-
-          # Find the dbt folder regardless of casing
-          DBT_DIR=$(find . -maxdepth 1 -iname "sales_analytics" -type d | head -1)
-          echo "Found dbt folder: $DBT_DIR"
-
-          cd $DBT_DIR
-          echo "Current directory: $(pwd)"
-          ls -la
-
+          cd Sales_analytics
           dbt seed
           dbt run
           dbt test
 
-      # Step 7 — Export marts to CSV
       - name: Export to Power BI CSVs
         run: python scripts/export_to_powerbi.py
 
-      # Step 8 — Commit updated CSVs back to GitHub
       - name: Commit updated data
         run: |
           git config --global user.name "github-actions"
